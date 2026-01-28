@@ -1,22 +1,20 @@
 # Tugas 02 - Bootcamp Jago Golang Basic with Umam 🚀
 
 [![Golang](https://img.shields.io/badge/Golang-1.25%2B-blue.svg)](https://golang.org/)
-[![Supabase](https://img.shields.io/badge/Supabase-green)](https://www.supabase.com/)
+[![Supabase](https://img.shields.io/badge/Supabase-v2.0%2B-3ECF8E.svg)](https://supabase.com/)
 ---
 
-## 🧐 Tugas Session 2 Bootcamp Jago Golang Basic with Umam untuk membuat RESTful API untuk menu products & categories.
+## 🧐 Membuat RESTful API untuk menu Products & Categories.
 
 Dalam repositori ini kita menerapkan `Golang` sebagai platform dasar bahasa pemrograman yang digunakan dalam pembuatan `Rest API`.
-Di dalam repositori ini juga kami terapkan `Supabase` sebagai media penyimpanan untuk mempermudah dalam pengerjaan di ranah menejemen database PostgreSQL.
+Di dalam repositori ini juga kami terapkan `Supabase` sebagai media penyimpanan untuk mempermudah dalam pengerjaan di ranah menejemen database.
 
 ### 🛠️ Dibangun Dengan (The Tech Stack)
 
 Proyek ini dikembangkan menggunakan teknologi-teknologi utama berikut:
 
-* [![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/) 
-* [![Fiber](https://img.shields.io/badge/Fiber-v2-%2300ADEE.svg?style=for-the-badge&logo=gofiber&logoColor=white)](https://docs.gofiber.io)
-* [![Supabase](https://img.shields.io/badge/supabase-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-
+* [![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev)
+* [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
 ---
 
 ## 🏁 Memulai (Getting Started)
@@ -28,21 +26,19 @@ Bagian ini memandu Anda untuk menyiapkan dan menjalankan proyek di lingkungan lo
 Pastikan Anda telah menginstal yang berikut ini:
 
 * **Golang** (Versi 1.25 atau lebih tinggi)
-* **PostgreSQL** (Database)
-* **Git**
-* **Fiber v2**
+* **Supabase** (Database)
 
 ### 📦 Installation (Instalasi)
 
 1.  **Clone** repositori ini:
     ```bash
-     git clone git@github.com:heru-oktafian/tugas-01-bootacmp.git
+     git clone git@github.com:heru-oktafian/tugas-02.git
      cd cores
-     go mod init "github.com/heru-oktafian/tugas-01-bootacmp"
+     go mod init "github.com/heru-oktafian/tugas-02"
     ```
 
 2.  **Siapkan Database:**
-    * Buat database PostgreSQL baru.
+    * Buat database baru di Supabase.
     * Konfigurasi koneksi database Anda di file `.env` dengan menjadikan acuan `.example_env`.
 
 3.  **Siapkan Environment (Lingkungan):**
@@ -77,4 +73,4 @@ Dalam repository ini, kami juga sertakan proses serta tahapan dalam pembuatannya
 
 Heru Oktafian, ST., CTT - [@heru-oktafian](https://x.com/HeruOktafianST) - [info@heruoktafian.com](mailto:info@heruoktafian.com)
 
-Tautan Proyek: [https://github.com/heru-oktafian/tugas-01-bootcamp](https://github.com/heru-oktafian/tugas-01-bootcamp)
+Tautan Proyek: [https://github.com/heru-oktafian/tugas-02](https://github.com/heru-oktafian/tugas-02)
