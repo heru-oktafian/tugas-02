@@ -33,7 +33,7 @@ Pastikan Anda telah menginstal yang berikut ini:
 1.  **Clone** repositori ini:
     ```bash
      git clone git@github.com:heru-oktafian/tugas-02.git
-     cd cores
+     cd tugas-02
      go mod init "github.com/heru-oktafian/tugas-02"
     ```
 
