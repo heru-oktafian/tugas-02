@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -12,9 +11,11 @@ import (
 	"github.com/heru-oktafian/tugas-02/handlers"
 	"github.com/heru-oktafian/tugas-02/repositories"
 	"github.com/heru-oktafian/tugas-02/services"
+	"github.com/heru-oktafian/tugas-02/tools"
 	"github.com/spf13/viper"
 )
 
+// ubah Config
 type Config struct {
 	Port   string `mapstructure:"PORT"`
 	DBConn string `mapstructure:"DB_CONN"`
@@ -56,16 +57,12 @@ func main() {
 	http.HandleFunc("/api/categories/", categoryHandler.HandleCategoryByID)
 
 	// Setup routes
-	http.HandleFunc("/api/produk", productHandler.HandleProducts)
-	http.HandleFunc("/api/produk/", productHandler.HandleProductByID)
+	http.HandleFunc("/api/products", productHandler.HandleProducts)
+	http.HandleFunc("/api/products/", productHandler.HandleProductByID)
 
-	// localhost:8080/health
-	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(map[string]string{
-			"status":  "OK",
-			"message": "API Running",
-		})
+	// localhost:8080/api/test
+	http.HandleFunc("/api/test", func(w http.ResponseWriter, r *http.Request) {
+		tools.JSONResponseNoData(w, http.StatusOK, "OK")
 	})
 	fmt.Println("Server running di localhost:" + config.Port)
 

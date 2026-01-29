@@ -23,17 +23,17 @@ func (repo *CategoryRepository) GetAll() ([]models.Category, error) {
 	}
 	defer rows.Close()
 
-	products := make([]models.Category, 0)
+	categories := make([]models.Category, 0)
 	for rows.Next() {
 		var p models.Category
 		err := rows.Scan(&p.ID, &p.Name, &p.Description)
 		if err != nil {
 			return nil, err
 		}
-		products = append(products, p)
+		categories = append(categories, p)
 	}
 
-	return products, nil
+	return categories, nil
 }
 
 func (repo *CategoryRepository) Create(category *models.Category) error {
@@ -59,8 +59,8 @@ func (repo *CategoryRepository) GetByID(id int) (*models.Category, error) {
 }
 
 func (repo *CategoryRepository) Update(category *models.Category) error {
-	query := "UPDATE categories SET name = $1 WHERE id = $2"
-	result, err := repo.db.Exec(query, category.Name, category.ID)
+	query := "UPDATE categories SET name = $1, description = $2 WHERE id = $3"
+	result, err := repo.db.Exec(query, category.Name, category.Description, category.ID)
 	if err != nil {
 		return err
 	}
